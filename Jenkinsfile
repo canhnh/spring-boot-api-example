@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew assemble'
+                sh 'chmod +x ./gradlew build'
             }
         }
         stage('Test') {
             steps {
-                sh './gradlew test'
+                sh 'chmod +x ./gradlew test'
             }
         }
     }
